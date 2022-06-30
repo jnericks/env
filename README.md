@@ -53,7 +53,7 @@ ln -s ~/env/fish ~/.config/fish
 6. Symlink the gitignored `~/env/local/` directory to my cloud directory which has local secrets and stuff.
 
 ```sh
-ln -s ln -s  ~/path/to/cloud/drive/configs/ ~/env/local
+ln -s  ~/path/to/cloud/drive/configs/ ~/env/local
 ```
 
 ## Git
