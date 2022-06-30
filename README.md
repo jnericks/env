@@ -1,6 +1,6 @@
 # env
 
-My environment, git cloned at `~/env`
+1. git clone this repo to `~/env`
 
 ## Homebrew
 
@@ -18,9 +18,9 @@ brew bundle --file ~/env/Brewfile
 
 ## Fish Shell
 
-1. install [fish shell](https://fishshell.com/) - should be installed via homebrew above
-2. install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
-3. Symlink `~/env/fish` to `~/.config/fish` which is the default location that fish shell loads configuration, functions and completions
+1. Install [fish shell](https://fishshell.com/) (should be installed via Brewfile above)
+2. Install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+3. Symlink location where fish shell loads configuration, functions and completions to this repo
 
 ```sh
 ln -s ~/env/fish ~/.config/fish
