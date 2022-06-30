@@ -7,13 +7,13 @@
 1. Install [homebrew](https://brew.sh/)
 
 ```sh
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2. Install packages in Brewfile
 
 ```sh
-$ brew bundle --file ~/env/Brewfile
+brew bundle --file ~/env/Brewfile
 ```
 
 ## Fish Shell
@@ -40,14 +40,14 @@ $ cat /etc/shells                                                               
 3. Make fish your default shell
 
 ```sh
-$ chsh -s /usr/local/bin/fish
+chsh -s /usr/local/bin/fish
 ```
 
 4. Install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 5. Symlink location where fish shell loads configuration, functions and completions to this repo
 
 ```sh
-$ ln -s ~/env/fish ~/.config/fish
+ln -s ~/env/fish ~/.config/fish
 ```
 
 ## Git
@@ -55,8 +55,8 @@ $ ln -s ~/env/fish ~/.config/fish
 1. Symlink gitconfig & gitignore
 
 ```sh
-$ ln -s ~/env/git/gitconfig.symlink ~/.gitconfig
-$ ln -s ~/env/git/gitignore.symlink ~/.gitignore
+ln -s ~/env/git/gitconfig.symlink ~/.gitconfig && \
+ln -s ~/env/git/gitignore.symlink ~/.gitignore
 ```
 
 ## iTerm 2
