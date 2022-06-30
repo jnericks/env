@@ -19,8 +19,32 @@ brew bundle --file ~/env/Brewfile
 ## Fish Shell
 
 1. Install [fish shell](https://fishshell.com/) (should be installed via Brewfile above)
-2. Install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
-3. Symlink location where fish shell loads configuration, functions and completions to this repo
+2. Ensure `/opt/homebrew/bin/fish` is listed in `/etc/shells`
+
+```sh
+$ cat /etc/shells                                                                                                                             Thu Jun 30 15:55:29 2022
+# List of acceptable shells for chpass(1).
+# Ftpd will not allow users to connect who are not using
+# one of these shells.
+
+/bin/bash
+/bin/csh
+/bin/dash
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+/opt/homebrew/bin/fish
+```
+
+3. Make fish your default shell
+
+```sh
+chsh -s /usr/local/bin/fish
+```
+
+4. Install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+5. Symlink location where fish shell loads configuration, functions and completions to this repo
 
 ```sh
 ln -s ~/env/fish ~/.config/fish
@@ -37,7 +61,7 @@ ln -s ~/env/git/gitignore.symlink ~/.gitignore
 
 ## iTerm 2
 
-1. Check "Load preferences from a custom folder or URL" and set to `~/env/iterm`
+1. Within `General > Preferences` ensure `Load preferences from a custom folder or URL` is checked and set to `~/env/iterm`
 
 ## Alfred
 
