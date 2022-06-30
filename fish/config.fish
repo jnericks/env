@@ -6,8 +6,8 @@ set -gx ENV_DIR $HOME/env
 set -gx PATH $PATH /opt/homebrew/bin
 
  # load configs
-for c in (ls $ENV_DIR/**/config.fish | grep -v /fish/)
-    source $c
+for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
+    source $cfg
 end
 
 # load gitignored configs

@@ -40,7 +40,7 @@ SETUVAR _fish_abbr_gs:git\x20s
 SETUVAR _fish_abbr_gshowtool:git\x20showtool
 SETUVAR _fish_abbr_gup:git\x20up
 SETUVAR _fish_abbr_gws:git\x20ws
-SETUVAR _fish_abbr_hw:echo\x20Hello\x20World
+SETUVAR _fish_abbr_hw:echo\x20\x27Hello\x2c\x20World\x21\x21\x21\x21\x21\x27
 SETUVAR _fish_abbr_l:ls\x20\x2dalF
 SETUVAR _fish_abbr_mw:mwinit\x20\x2do
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
