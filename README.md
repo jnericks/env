@@ -34,3 +34,11 @@ ln -s ~/env/fish ~/.config/fish
 ln -s ~/env/git/gitconfig.symlink ~/.gitconfig
 ln -s ~/env/git/gitignore.symlink ~/.gitignore
 ```
+
+## iTerm 2
+
+1. Check "Load preferences from a custom folder or URL" and set to `~/env/iterm`
+
+## Alfred
+
+1. Import each workflow within `~/env/alfred/workflows` into Alfred
