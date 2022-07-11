@@ -15,13 +15,15 @@ if test -f $ENV_DIR/fish/twitch.fish
     source $ENV_DIR/fish/twitch.fish
 end
 
+abbr reload! 'omf reload'
+
 # Navigation
-abbr ..     'cd ..'
-abbr ...    'cd ../..'
-abbr ....   'cd ../../..'
-abbr .....  'cd ../../../..'
-abbr ...... 'cd ../../../../..'
-abbr l      'ls -alF'
+alias ..     'cd ..'
+alias ...    'cd ../..'
+alias ....   'cd ../../..'
+alias .....  'cd ../../../..'
+alias ...... 'cd ../../../../..'
+alias l      'ls -alF'
 
 # bobthefish theme settings
 # https://github.com/oh-my-fish/theme-bobthefish
