@@ -1,2 +1,3 @@
-# https://github.com/FabioAntunes/fish-nvm
-# nvm use 16.15.1
+# fish nvm integration supported by omf package: https://github.com/FabioAntunes/fish-nvm
+
+nvm use --lts
