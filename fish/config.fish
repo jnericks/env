@@ -1,9 +1,9 @@
 # Install: 
 # ln -s $ENV_DIR/fish $HOME/.config/fish
 
-# root env directory
+fish_add_path /opt/homebrew/bin
+
 set -gx ENV_DIR $HOME/env
-set -gx PATH $PATH /opt/homebrew/bin
 
  # load configs
 for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
@@ -14,8 +14,6 @@ end
 if test -f $ENV_DIR/fish/twitch.fish
     source $ENV_DIR/fish/twitch.fish
 end
-
-abbr reload! 'omf reload'
 
 # Navigation
 alias ..     'cd ..'
