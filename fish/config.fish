@@ -1,11 +1,12 @@
 # Install: 
 # ln -s $ENV_DIR/fish $HOME/.config/fish
 
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
-
 set -gx ENV_DIR $HOME/env
 set -gx EDITOR  code
+
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
+fish_add_path $ENV_DIR/bin
 
  # load configs
 for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+url=$1
+
+case $url in
+
+*"amazon"*)
+    # Parses out the ASIN and provides a short url to the product
+    asin=$(echo "{$url}" | grep -Eo '(?:[/dp/]|$)([A-Z0-9]{10})')
+    echo "https://amzn.com/dp${asin}/" | tr -d '\r' | tr -d '\n'
+    ;;
+
+*"instagram"*)
+    # Cleans up an instagram link to remove query params
+
+    url=${url/www./}
+    url=${url/https:\/\/instagram.com\//}
+    url=$(echo "${url}" | cut -f1 -d"?")
+    echo "https://instagram.com/${url}" | tr -d '\r' | tr -d '\n'
+    ;;
+
+*"twitter"*)
+    # Cleans up the "Copy Share Link" with a vxtwitter url
+    # which shows a better preview in slack, telegram, etc
+
+    url=${url/www./}
+    url=${url/https:\/\/twitter.com\//}
+    url=$(echo "${url}" | cut -f1 -d"?")
+    echo "https://vxtwitter.com/${url}" | tr -d '\r' | tr -d '\n'
+    ;;
+
+*)
+    # Remove all query parameters
+
+    url=$(echo "${url}" | cut -f1 -d"?")
+    echo "$url" | tr -d '\r' | tr -d '\n'
+    ;;
+
+esac
