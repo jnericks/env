@@ -2,46 +2,19 @@
     # extra commands available from git-extras
     # git extras --help
     # https://github.com/tj/git-extras/blob/master/Commands.md
-
-    # source of some aliases are from Phil Haack
-    # https://haacked.com/archive/2014/07/28/github-flow-aliases/
-
     a       = alias
-
     cm      = !git add -A && git commit -m
     amend   = !git add -A && git commit --amend
     amendx  = !git add -A && git commit --amend --no-edit
-
     co      = checkout
     cob     = checkout -b
-
     ps      = push
-
     up      = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    mpl     = !git checkout master && git pull --rebase
-    mup     = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
-
-    rb      = rebase
-
     b       = branch
     bps     = push -u origin HEAD                   # push current branch to remote with same name
-    bclean  = "!f() { git checkout ${1-master} && git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
-
     rh      = reset --hard
     rhc     = !git reset --hard && git clean -dfx   # reset & clean working directory
     s       = status -sb                            # short status, overrides ghostscript
-    ws      = ws-status
-
-    l       = log --color=auto --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-    root    = rev-parse --show-toplevel             # root path
-
-    # list branches sorted by last modified
-    ls-branch = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
-
-    # git difftool
-    showtool = "!f() { git difftool $1^ $1; }; f"
-    added = difftool --cached
-	last = log -1 HEAD
 [color]
     diff = auto
     status = auto

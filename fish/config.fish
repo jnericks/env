@@ -7,6 +7,7 @@ set -gx EDITOR  code
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path $ENV_DIR/bin
+fish_add_path /Applications/GoLand.app/Contents/MacOS
 
  # load configs
 for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
@@ -27,6 +28,9 @@ alias ....   'cd ../../..'
 alias .....  'cd ../../../..'
 alias ...... 'cd ../../../../..'
 alias l      'ls -alF'
+
+# Add-ons
+alias lg     'lazygit'
 
 # bobthefish theme settings
 # https://github.com/oh-my-fish/theme-bobthefish
