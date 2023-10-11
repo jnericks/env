@@ -8,6 +8,7 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path $ENV_DIR/bin
 fish_add_path /Applications/GoLand.app/Contents/MacOS
+fish_add_path "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
  # load configs
 for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
