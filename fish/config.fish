@@ -15,11 +15,6 @@ for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
     source $cfg
 end
 
-# load gitignored configs
-if test -f $ENV_DIR/fish/twitch.fish
-    source $ENV_DIR/fish/twitch.fish
-end
-
 alias df '$EDITOR $ENV_DIR'
 
 # Navigation
