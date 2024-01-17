@@ -1,2 +1,4 @@
 fish_variables
 local
+.DS_Store
+Brewfile.lock.json

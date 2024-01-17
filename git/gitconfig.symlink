@@ -15,36 +15,13 @@
     rh      = reset --hard
     rhc     = !git reset --hard && git clean -dfx   # reset & clean working directory
     s       = status -sb                            # short status, overrides ghostscript
-[color]
-    diff = auto
-    status = auto
-    branch = auto
-	ui = true
-[core]
-    excludesfile = ~/.gitignore
-    editor = vim
-[merge]
-    tool = vscode
-[mergetool "vscode"]
-    cmd = code --wait $MERGED
-[diff]
-    tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-[mergetool]
-    keepBackup = false
-[push]
-    # in centralized workflow, work like upstream with an added safety to refuse to push if the upstream branch’s name is different from the local one.
-    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
-    default = simple
-[pull]
-    rebase = true
-[status]
-    # Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
-    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-statusshowUntrackedFiles
-    showUntrackedFiles = all
 [user]
     name = Jon Erickson
-    email = erjonath@twitch.tv
-[init]
-    defaultBranch = main
+    email = jon@ericksn.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINgm3rZ/koeaRq4+iJgHHvN6oow0sT0s3BeUoKYsI2nn
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
