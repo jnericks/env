@@ -26,7 +26,7 @@ case $url in
     url=${url/www./}
     url=${url/https:\/\/twitter.com\//}
     url=$(echo "${url}" | cut -f1 -d"?")
-    echo "https://vxtwitter.com/${url}" | tr -d '\r' | tr -d '\n'
+    echo "https://fixupx.com/${url}" | tr -d '\r' | tr -d '\n'
     ;;
 
 *)
