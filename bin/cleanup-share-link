@@ -20,11 +20,21 @@ case $url in
     ;;
 
 *"twitter"*)
-    # Cleans up the "Copy Share Link" with a vxtwitter url
+    # Cleans up the "Copy Share Link" with a fixupx url
     # which shows a better preview in slack, telegram, etc
 
     url=${url/www./}
     url=${url/https:\/\/twitter.com\//}
+    url=$(echo "${url}" | cut -f1 -d"?")
+    echo "https://fixupx.com/${url}" | tr -d '\r' | tr -d '\n'
+    ;;
+
+*"x.com"*)
+    # Cleans up the "Copy Share Link" with a fixupx url
+    # which shows a better preview in slack, telegram, etc
+
+    url=${url/www./}
+    url=${url/https:\/\/x.com\//}
     url=$(echo "${url}" | cut -f1 -d"?")
     echo "https://fixupx.com/${url}" | tr -d '\r' | tr -d '\n'
     ;;
