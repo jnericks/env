@@ -30,11 +30,15 @@ alias lg     'lazygit'
 
 # bobthefish theme settings
 # https://github.com/oh-my-fish/theme-bobthefish
+# omf install bobthefish
 set -g theme_display_git_default_branch yes
 set -g theme_nerd_fonts yes
 set -g theme_newline_cursor yes
 set -g fish_prompt_pwd_dir_length 0
 
+# peco plugin
+# https://github.com/oh-my-fish/plugin-peco
+# omf install peco
 function fish_user_key_bindings
     # Please bind peco_select_history to your favorite key.
     # If you'd like to bind Ctrl+r:

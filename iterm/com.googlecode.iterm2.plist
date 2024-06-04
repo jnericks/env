@@ -1274,6 +1274,8 @@
 	<real>0.39546457827669901</real>
 	<key>StatusBarPosition</key>
 	<integer>0</integer>
+	<key>SwitchPaneModifier</key>
+	<integer>5</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>6</integer>
 	<key>TabViewType</key>

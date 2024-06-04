@@ -8,6 +8,7 @@
     amendx  = !git add -A && git commit --amend --no-edit
     co      = checkout
     cob     = checkout -b
+    lsb     = !git branch | grep -Fv -e 'main' -e 'master'
     ps      = push
     up      = !git pull --rebase --prune $@ && git submodule update --init --recursive
     b       = branch
@@ -18,7 +19,7 @@
 [user]
     name = Jon Erickson
     email = jon@ericksn.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINgm3rZ/koeaRq4+iJgHHvN6oow0sT0s3BeUoKYsI2nn
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINgm3rZ/koeaRq4+iJgHHvN6oow0sT0s3BeUoKYsI2nn
 [gpg]
 	format = ssh
 [gpg "ssh"]
