@@ -21,8 +21,10 @@
     email = jon@ericksn.com
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINgm3rZ/koeaRq4+iJgHHvN6oow0sT0s3BeUoKYsI2nn
 [gpg]
-	format = ssh
+    format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
-	gpgsign = true
+    gpgsign = true
+[core]
+    editor = vim

@@ -1,8 +1,9 @@
 # Install: 
 # ln -s $ENV_DIR/fish $HOME/.config/fish
 
-set -gx ENV_DIR $HOME/env
-set -gx EDITOR  code
+set -gx ENV_DIR     "$HOME/env"
+set -gx CLOUD_DIR   "$HOME/Google Drive/My Drive"
+set -gx EDITOR      code
 
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
@@ -15,7 +16,8 @@ for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
     source $cfg
 end
 
-alias df '$EDITOR $ENV_DIR'
+alias df '$EDITOR $ENV_DIR'                # dotfiles
+alias sp '$EDITOR $CLOUD_DIR/Scratchpad'   # scratchpad
 
 # Navigation
 alias ..     'cd ..'
