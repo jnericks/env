@@ -16,8 +16,10 @@ for cfg in (ls $ENV_DIR/**/*config.fish | grep -v /fish/config.fish)
     source $cfg
 end
 
-alias df '$EDITOR $ENV_DIR'                # dotfiles
-alias sp '$EDITOR $CLOUD_DIR/Scratchpad'   # scratchpad
+alias df    '$EDITOR $ENV_DIR'                              # dotfiles
+alias sp    '$EDITOR $CLOUD_DIR/Scratchpad'                 # scratchpad
+alias gopg  'goland $CLOUD_DIR/Scratchpad/_go-playground/'  # go-playground
+
 
 # Navigation
 alias ..     'cd ..'
