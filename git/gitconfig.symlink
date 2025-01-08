@@ -9,8 +9,8 @@
     co      = checkout
     cob     = checkout -b
     lsb     = !git branch | grep -Fv -e 'main' -e 'master'
+    latest  = !git checkout master && git fetch && git pull
     ps      = push
-    up      = !git pull --rebase --prune $@ && git submodule update --init --recursive
     b       = branch
     bps     = push -u origin HEAD                   # push current branch to remote with same name
     rh      = reset --hard

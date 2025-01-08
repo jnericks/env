@@ -2,7 +2,7 @@
 # ln -s $ENV_DIR/fish $HOME/.config/fish
 
 set -gx ENV_DIR     "$HOME/env"
-set -gx CLOUD_DIR   "$HOME/Google Drive/My Drive"
+set -gx CLOUD_DIR   "$HOME/Drive"
 set -gx EDITOR      code
 
 fish_add_path /opt/homebrew/bin

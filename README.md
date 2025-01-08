@@ -48,16 +48,22 @@ Install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 ```
 
+Symlink Cloud Drive storage location
+
+```sh
+ln -s ~/Drive ~/Library/CloudStorage/GoogleDrive-<email>
+```
+
 Symlink location where fish shell loads configuration, functions and completions (may have to delete that default fish directory first)
 
 ```sh
 ln -s ~/env/fish ~/.config/fish
 ```
 
-Symlink the gitignored `~/env/local/` directory to my cloud directory which has local secrets and stuff.
+Symlink the gitignored `~/env/local` directory to my cloud directory which has local secrets and stuff.
 
 ```sh
-ln -s ~/Google\ Drive/My\ Drive/Dev/fish ~/env/local
+ln -s ~/Drive/<local> ~/env/local
 ```
 
 ## Git

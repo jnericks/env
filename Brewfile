@@ -1,4 +1,4 @@
-# Thu Oct 10 11:02:42 PDT 2024
+# Wed Jan  8 10:43:11 PST 2025
 
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
@@ -30,7 +30,7 @@ brew "libtool"
 brew "libyaml"
 brew "nvm"
 brew "peco"
-brew "pkg-config"
+brew "pkgconf"
 brew "protobuf"
 brew "python@3.10"
 brew "rbenv"
@@ -57,7 +57,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
 cask "httpie"
-cask "insomnia"
 cask "iterm2"
 cask "itsycal"
 cask "jetbrains-toolbox"
