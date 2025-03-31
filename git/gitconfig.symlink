@@ -16,6 +16,10 @@
     rh      = reset --hard
     rhc     = !git reset --hard && git clean -dfx   # reset & clean working directory
     s       = status -sb                            # short status, overrides ghostscript
+    rs      = restore .         # restores branch
+    rbm     = rebase master     # rebase master onto branch
+    rb2     = rebase -i HEAD~2  # squash last commit onto the previous
+    pf      = push --force
 [user]
     name = Jon Erickson
     email = jon@ericksn.com
