@@ -1,4 +1,4 @@
-# Mon Feb  3 11:31:17 PST 2025
+# Tue Mar 18 12:01:23 PDT 2025
 
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
@@ -16,6 +16,7 @@ brew "coreutils"
 brew "docker"
 brew "docker-buildx"
 brew "exa"
+brew "exiftool"
 brew "harfbuzz"
 brew "libass"
 brew "pango"
@@ -68,6 +69,7 @@ cask "karabiner-elements"
 cask "kindle"
 cask "marta"
 cask "notion"
+cask "proton-mail"
 cask "raycast"
 cask "rocket"
 cask "slack@beta"
