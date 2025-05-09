@@ -5,5 +5,8 @@ function save-brewfile -d "Updates Brewfile"
     brew bundle dump --force --file=$file
     printf "# $(date)"\n\n"$(cat $file)" > $file
 
+    # remove internal brews
+    sed -i '' '/uber/d' 'Brewfile'
+
     popd
 end

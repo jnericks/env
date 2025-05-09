@@ -16,8 +16,8 @@
     rh      = reset --hard
     rhc     = !git reset --hard && git clean -dfx   # reset & clean working directory
     s       = status -sb                            # short status, overrides ghostscript
-    rs      = restore .         # restores branch
-    rbm     = rebase master     # rebase master onto branch
+    rsa     = restore .
+    rbm     = rebase main
     rb2     = rebase -i HEAD~2  # squash last commit onto the previous
     pf      = push --force
 [user]
@@ -32,3 +32,19 @@
     gpgsign = true
 [core]
     editor = vim
+[url "ssh://code.uber.internal/"]
+	insteadOf = https://code.uber.internal/
+[url "ssh://config.uber.internal/"]
+	insteadOf = https://config.uber.internal/
+[url "ssh://gitolite@code.uber.internal/"]
+	insteadOf = git://code.uber.internal/
+[url "ssh://git@github.com/uber/"]
+	insteadOf = https://github.com/uber/
+[credential "https://git.uberinternal.com"]
+	helper = usso
+[credential "https://vfs4g-cache.uberinternal.com"]
+	helper = usso
+[http "https://gopkg.uberinternal.com"]
+	followRedirects = true
+[http "https://gopkg.in"]
+	followRedirects = true
